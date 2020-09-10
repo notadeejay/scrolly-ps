@@ -7,9 +7,11 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
+    "react-animation": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "react-scrollama": "^2.2.12"
+    "react-scrollama": "^2.2.12",
+    "velocity-react": "^1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
