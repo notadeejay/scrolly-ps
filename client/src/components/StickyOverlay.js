@@ -4,11 +4,8 @@ import { AnimateOnChange } from 'react-animation'
 
 import '../styles/scroll.css'
 
-
-
-
  
-const ScrollExample = () => {
+const StickyOverlay = () => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [steps] = useState([1,2,3,4,5])
   const [data, setData] = useState(["Scroll down to begin", "UNDERSTAND", "IDENTIFY", "ANALYZE", "PRIORITIZE"])
@@ -59,26 +56,9 @@ const ScrollExample = () => {
 
   return (
     <React.Fragment>
-    <div className="graphicContainer">
+    <div className="center-graphicContainer">
     <h3>Steps in a Pre-Sprint Risk Management Meeting</h3>
-    <div className="scroller">
-    <Scrollama onStepEnter={onStepEnter} onStepExit={onStepExit} offset={0.5}>
-        {steps.map((_, stepIndex) => (
-          <Step data={stepIndex} key={stepIndex}>
-            <div
-            className="leftContent"
-              style={{
-                opacity: currentStepIndex === stepIndex ? 1 : 0.2,
-              }}
-            >
-              <p>{scrollContent[stepIndex].stanza}</p>
-            </div>
-          </Step>
-        ))}
-      </Scrollama>
-    </div>
-
-    <div className="graphic">
+    <div className="graphic-background">
     <AnimateOnChange
      animationIn="custom-animation-in 500ms ease-out forwards"
      animationOut="custom-animation-out 500ms ease-out forwards"
@@ -89,10 +69,28 @@ const ScrollExample = () => {
       }
     </AnimateOnChange>
     </div>
-    
+    <div className="center-scroller">
+    <Scrollama onStepEnter={onStepEnter} onStepExit={onStepExit} offset={0.6}>
+        {steps.map((_, stepIndex) => (
+          <Step data={stepIndex} key={stepIndex}>
+            <div
+            className="centerContent"
+              style={{
+                opacity: currentStepIndex === stepIndex ? 1 : 0.2,
+              }}
+            >
+              <p className="centerContent"
+              style={{
+                background: currentStepIndex === stepIndex ? 'goldenrod' : 'transparent',
+              }}>{scrollContent[stepIndex].stanza}</p>
+            </div>
+          </Step>
+        ))}
+      </Scrollama>
+    </div>
     </div>
     </React.Fragment>
   );
 };
  
-export default ScrollExample;
+export default StickyOverlay;

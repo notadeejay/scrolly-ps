@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import ScrollExample from './components/ScrollExample'
+import StickySide from './components/StickySide'
+import StickyOverlay from './components/StickyOverlay'
 
 
 
@@ -25,7 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p className="App-intro">{response}</p>
-        <ScrollExample />
+        <StickyOverlay />
       </header>
     </div>
   );

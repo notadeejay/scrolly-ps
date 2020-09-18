@@ -80,3 +80,36 @@
       position: fixed;
       text-transform: uppercase;
     }
+    .center-graphicContainer {
+      flex-direction: column;
+      padding: 40vh 4vw 70vh;
+
+    }
+    .centerContent {
+       margin: 0 auto 2rem auto;
+       padding: 1rem;
+       max-width: 20rem;
+       color: #fff;
+       height: 405px;
+    }
+
+    .graphic-background {
+      height: 270px;
+      top: 135px;
+      position: sticky;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      z-index: 0;
+    }
+
+    .graphic-background p {
+      font-family: 'Karla', sans-serif;
+      font-size: 5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #000;
+    }
