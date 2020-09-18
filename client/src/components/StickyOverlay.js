@@ -81,7 +81,7 @@ const StickyOverlay = () => {
             >
               <p className="centerContent"
               style={{
-                background: currentStepIndex === stepIndex ? 'goldenrod' : 'transparent',
+                background: currentStepIndex === stepIndex && currentStepIndex !== 0 ? '#FFC34D':  'transparent',
               }}>{scrollContent[stepIndex].stanza}</p>
             </div>
           </Step>

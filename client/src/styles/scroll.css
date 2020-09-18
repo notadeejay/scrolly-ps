@@ -88,9 +88,8 @@
     .centerContent {
        margin: 0 auto 2rem auto;
        padding: 1rem;
-       max-width: 20rem;
+       max-width: 30rem;
        color: #fff;
-       height: 405px;
     }
 
     .graphic-background {
